@@ -28,4 +28,4 @@ COPY --from=builder /handyteamapi /handyteamapi
 EXPOSE 8080
 
 # Run the application
-CMD ["/handyteamapi", "serve"]
+CMD ["/handyteamapi", "serve", "--http=0.0.0.0:8080"]

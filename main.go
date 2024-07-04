@@ -1,7 +1,7 @@
 package main
 
 import (
-	"handyteamapi/hooks"
+	"handyteamapi/pb_hooks"
 	"log"
 	"os"
 
@@ -19,8 +19,8 @@ func main() {
 		return nil
 	})
 
-	hooks.RegisterUserHooks(app)
-	hooks.PlayerUserHooks(app)
+	pb_hooks.RegisterUserHooks(app)
+	pb_hooks.PlayerUserHooks(app)
 
 	if err := app.Start(); err != nil {
 		log.Fatal(err)
